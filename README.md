@@ -1,52 +1,40 @@
-# Project Name
-> Outline a brief description of your project.
+# Bike Sharing Assignment
+> Building a multiple linear regression model for the prediction of demand for shared bikes of BoomBikes.
 
+## Problem Statement
 
-## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Conclusions](#conclusions)
-* [Acknowledgements](#acknowledgements)
+A US bike-sharing provider BoomBikes has recently suffered considerable dips in their revenues due to the ongoing Corona pandemic. The company is finding it very difficult to sustain in the current market scenario. So, it has decided to come up with a mindful business plan to be able to accelerate its revenue as soon as the ongoing lockdown comes to an end, and the economy restores to a healthy state. 
 
-<!-- You can include any other section that is pertinent to your problem -->
+Based on various meteorological surveys and people's styles, the service provider firm has gathered a large dataset on daily bike demands across the American market based on some factors. It wishes to use this dataset to understand the factors affecting the demand for these shared bikes in the American market so that it can prepare itself to cater to the people's needs once the situation gets better all around and stand out from other service providers and make huge profits.
 
-## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
-
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
-
-## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
-
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
-
+## The company wants to know:
+- Which variables are significant in predicting the demand for shared bikes.
+- How well those variables describe the bike demands
 
 ## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
+- numpy - version 1.24.3
+- pandas - version 1.5.3
+- matplotlib - version 3.7.1
+- seaborn - version 0.12.2
+- statsmodels - version 0.14.2
+- sklearn - version 1.5.1  
 
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
+## Conclusion
+Significant variables to predict the demand for shared bikes:
 
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
+- 'year'
+- 'workingday'
+- Seasons ('spring', 'summer', 'winter')
+- Months - January, September ('jan', 'sep')
+- Saturday ('sat')
+- Weather situation ('Misty','light_snowrain')
 
+And How well these variables describe the bike demands is given by the below rule:
 
-## Contact
-Created by @crepantherx - feel free to contact me!
+cnt = 0.4506 * const + 0.2569 * yr + 0.0576 * Saturday + 0.0562 * workingday + 0.0406 * winter + -0.09 * Mist + -0.1268 * Dec + -0.17 * Nov + -0.2647 * Light + -0.3099 * spring
 
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+## Summary
+Following files have been included as part of solution:
+1. README.md file sharing the brief Problem Description.
+2. Sudhir_Singh_LR_BoomBikes.ipynb file showing building of Multiple Linear Regression Model on the dataset.
+3. Sudhir_Singh_LR_BoomBikes.pdf file having subjective questions and their answers.
